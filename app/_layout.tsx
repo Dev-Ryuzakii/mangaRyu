@@ -1,14 +1,13 @@
-
 import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
-
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
+    // Poppins font family
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
     "Poppins-Bold": require("../assets/fonts/Poppins-Bold.ttf"),
     "Poppins-ExtraBold": require("../assets/fonts/Poppins-ExtraBold.ttf"),
@@ -18,6 +17,17 @@ const RootLayout = () => {
     "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
     "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
     "Poppins-Thin": require("../assets/fonts/Poppins-Thin.ttf"),
+    
+    // Josefin Sans font family
+    "JosefinSans-Regular": require("../assets/fonts/JosefinSans-Regular.ttf"),
+    "JosefinSans-Bold": require("../assets/fonts/JosefinSans-Bold.ttf"),
+   
+    
+    // Italianno font family
+    "Italianno-Regular": require("../assets/fonts/Italianno-Regular.ttf"),
+    
+    // Itim font family
+    "Itim-Regular": require("../assets/fonts/Itim-Regular.ttf"),
   });
 
   useEffect(() => {
@@ -38,10 +48,10 @@ const RootLayout = () => {
 
   return (
     <Stack>
-        <Stack.Screen name="index" options={{headerShown: false}} />
-        <Stack.Screen name="(auth)" options={{headerShown: false}} />
-        <Stack.Screen name="(tabs)" options={{headerShown: false}} />
-        </Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
 };
 

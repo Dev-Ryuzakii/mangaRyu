@@ -9,7 +9,7 @@ export default function Index() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.replace("/sign"); // Adjust the route as needed
-    }, 800);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,8 +30,8 @@ export default function Index() {
 
       {/* Centered Text */}
       <View className="flex-1 justify-center items-center">
-        <Text className="text-[64px] text-center font-[Italianno] text-black">
-          Your Centered Text
+        <Text className="text-[64px] text-center font-italianno text-black">
+          MangaRyu
         </Text>
       </View>
     </View>
